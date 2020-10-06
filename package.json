@@ -1,0 +1,30 @@
+{
+  "name": "",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": "",
+  "license": "",
+  "author": "",
+  "scripts": {
+    "serve": "cross-env NODE_ENV=development concurrently \"postcss css/tailwind.css -o public/css/styles.css --watch\" \"live-server public -q\"",
+    "development": "cross-env NODE_ENV=development postcss css/tailwind.css -o public/css/styles.css",
+    "dev-watch": "cross-env NODE_ENV=development postcss css/tailwind.css -o public/css/styles.css --watch",
+    "production": "cross-env NODE_ENV=production postcss css/tailwind.css -o public/css/styles.min.css",
+    "start": "npm run serve"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "alpinejs": "^2.7.0",
+    "autoprefixer": "^10.0.1",
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.2",
+    "live-server": "^1.2.1",
+    "postcss": "^8.1.1",
+    "postcss-cli": "^8.0.0",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.8.10"
+  }
+}
