@@ -6,25 +6,27 @@
   "license": "",
   "author": "",
   "scripts": {
-    "serve": "cross-env NODE_ENV=development concurrently \"postcss css/tailwind.css -o public/css/styles.css --watch\" \"live-server public -q\"",
+    "serve": "cross-env NODE_ENV=development concurrently \"html-includes --src src --dest public --watch --quiet\" \"postcss css/tailwind.css -o public/css/styles.css --watch\" \"live-server public -q\"",
+    "compile": "html-includes --src src --dest public --watch --quiet",
     "development": "cross-env NODE_ENV=development postcss css/tailwind.css -o public/css/styles.css",
-    "dev-watch": "cross-env NODE_ENV=development postcss css/tailwind.css -o public/css/styles.css --watch",
-    "production": "cross-env NODE_ENV=production postcss css/tailwind.css -o public/css/styles.min.css",
+    "production": "cross-env NODE_ENV=production concurrently \"html-includes --src src --dest public --quiet\" \"postcss css/tailwind.css -o public/css/styles.css\"",
     "start": "npm run serve"
   },
   "devDependencies": {
-    "cssnano": "^4.1.10"
+    "cssnano": "^4.1.10",
+    "html-includes": "^4.3.3"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
-    "alpinejs": "^2.7.0",
-    "autoprefixer": "^10.0.1",
+    "alpinejs": "^2.7.3",
+    "autoprefixer": "^10.1.0",
     "concurrently": "^5.3.0",
-    "cross-env": "^7.0.2",
+    "cross-env": "^7.0.3",
     "live-server": "^1.2.1",
-    "postcss": "^8.1.1",
-    "postcss-cli": "^8.0.0",
-    "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.8.10"
+    "postcss": "^8.2.1",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^13.0.0",
+    "tailwindcss": "^2.0.2",
+    "typeface-montserrat": "^1.1.13"
   }
 }

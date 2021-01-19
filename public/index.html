@@ -3,13 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Start | Build Mobile</title>
   <link rel="stylesheet" href="/css/styles.css">
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
 </head>
-<body>
-  <section class="container mx-auto my-12">
-    <h1 class="text-2xl font-bold">Hello World!</h1>
+<body class="font-bm-sans">
+  <header class="px-4 py-4 mx-auto text-gray-800 bg-white">
+  <div class="container flex items-center justify-center mx-auto sm:justify-between">
+  	<div class="w-48 logo"><a href="index.html"><img src="/img/build-mobile-logo.png" width="100%" height="auto" alt="Build Mobile"></a></div>
+  	<nav>
+      <p class="hidden m-0 text-base leading-none sm:block"><a href="small-business-guide.html" class="leading-tight">Small Business Guide</a></p>
+    </nav>
+  </div>
+</header>
+
+<!-- BANNER -->
+  <section class="grid mb-16 text-white shadow-xl bg-gradient-to-br from-blue-900 to-bm-blue place-items-center md:grid-cols-2">
+
+    <div class="w-full bg-gray-400 bg-center bg-cover pb-7/12 h-96" style="background-image: url(/img/open-sign.jpg);">
+      <!-- <picture class="w-full h-auto">
+        <source srcset="/img/open-sign.jpg" media="(min-width: 981px)">
+        <source srcset="/img/open-sign-md.jpg" media="(min-width: 768px)">
+        <source srcset="/img/open-sign-sm.jpg" media="max-width: 640px">
+        <img src="/img/open-sign.jpg" width="100%" height="auto" alt="Build your business in Mobile" loading="lazy" />
+      </picture> -->
+    </div>
+    <header class="max-w-xl p-6">
+      <h2 class="text-white">At Build Mobile, We're Here to Help</h2>
+      <p>Building your business in Mobile?</p>
+      <p>We can help you navigate the development process, stay safe, and remain compliant. We’ve put together some guidelines so you’ll know what to expect.</p>
+      <p>Questions about the process? Don’t hesitate to get in touch!</p>
+    </header>
   </section>
+  <main class="container px-4 mx-auto">
+    <article class="mx-auto bm-grid">
+        <header class="text-center uppercase bm-content-wide">
+          <h1>Before You Begin</h1>
+          <p>Reality Check</p>
+        </header>
+
+      <!-- <div class="grid mx-auto mb-16 lg:items-center sm:grid-cols-2 gap-x-6">
+        <div><img src="https://picsum.photos/id/192/1000/500/" alt="" class="mb-6 w-100 md:rounded md:mb-0"></div>
+        <div class="max-w-xl">
+          <p class=""></p>
+        </div>
+      </div> -->
+
+      <div class="bm-content">
+        <p>The building and permitting process is complex, and every project is unique.</p>
+        <p class="mb-6">You will need to be aware of some of the expectations before you get started.</p>
+        <div x-data="{ toggle: false }">
+          <div class="p-3 mb-2 border rounded cursor-pointer border-bm-green" x-on:click="toggle = !toggle">
+            <p class="flex items-center m-0 hover:text-bm-green">
+              <svg class="w-6 h-6 mr-1 text-bm-green" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <strong>Timeline</strong>
+            </p>
+            <div x-show.transition="toggle" class="pt-3 my-3 border-t border-gray-300">
+              <p class="my-2">The process can take months</p>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ toggle: false }">
+          <div class="p-3 mb-2 border rounded cursor-pointer border-bm-green" x-on:click="toggle = !toggle">
+            <p class="flex items-center m-0 hover:text-bm-green">
+              <svg class="w-6 h-6 mr-1 text-bm-green" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <strong>Budget</strong>
+            </p>
+            <div x-show.transition="toggle" class="pt-3 my-3 border-t border-gray-300">
+              <p class="my-2">Drawings can be costly</p>
+              <p class="my-2">Hire contractors and be ready for cost overruns</p>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ toggle: false }">
+          <div class="p-3 mb-2 border rounded cursor-pointer border-bm-green" x-on:click="toggle = !toggle">
+            <p class="flex items-center m-0 hover:text-bm-green">
+              <svg class="w-6 h-6 mr-1 text-bm-green" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <strong>Approvals</strong>
+            </p>
+            <div x-show.transition="toggle" class="pt-3 my-3 border-t border-gray-300">
+              <p class="my-2">You may need to go in front of public commissions</p>
+            </div>
+          </div>
+        </div>
+        <div class="mb-8" x-data="{ toggle: false }">
+          <div class="p-3 mb-2 border rounded cursor-pointer border-bm-green" x-on:click="toggle = !toggle">
+            <p class="flex items-center m-0 hover:text-bm-green">
+              <svg class="w-6 h-6 mr-1 text-bm-green" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <strong>Professionals</strong>
+            </p>
+            <div x-show.transition="toggle" class="pt-3 my-3 border-t border-gray-300">
+              <p class="my-2">You may need to hire an architect, contractor, or attorney</p>
+            </div>
+          </div>
+        </div>
+        <p>These are some examples of what you can expect. As long as you are ready to meet these needs, we will do everything in our power to make you successful.</p>
+        <div class="my-16">
+          <h2 class="mb-4">Ready to get started?</h2>
+          <p class="flex items-center m-0 leading-tight">
+            <svg class="w-6 h-6 mr-2 text-bm-green" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+            <a href="small-business-guide.html" class="font-bold">View our Small Business Guide</a>
+          </p>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="w-full h-64 px-4 py-6 mt-32 md:py-12 bg-green-50">
+  <div class="container mx-auto">
+    <p>Footer</p>
+  </div>
+</footer>
+
+
 </body>
 </html>

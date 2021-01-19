@@ -1,7 +1,36 @@
+/*! purgecss start ignore */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/*! purgecss end ignore */
 
-/* Add custom and @apply styles here…
-@layer components {}
-*/
+/* Add custom and @apply styles here… */
+@layer components {
+  body { @apply font-sans text-lg text-gray-800; }
+  a:link, a:visited { @apply text-blue-600; }
+  a:hover, a:active { @apply underline text-bm-blue; }
+  /* .button { @apply } */
+  a.button { @apply px-4 py-2 font-semibold uppercase bg-white border rounded hover:no-underline hover:text-white border-bm-blue hover:bg-bm-green; }
+/* TYPOGRAPHY - BASE STYLES */
+  h1, h2, h3, h4 { @apply mb-4 font-bold tracking-tight text-bm-blue; }
+  h1 { @apply text-3xl md:text-6xl; }
+  h2 { @apply text-2xl md:text-3xl; }
+  h3 { @apply text-xl md:text-2xl; }
+  p { @apply mb-6 text-lg leading-relaxed md:text-xl; }
+  ul, ol { @apply mb-6; }
+    ul { @apply ml-2 list-disc; }
+    ol { @apply ml-2 list-decimal; }
+    li { @apply mb-3 text-lg leading-relaxed md:text-xl; }
+  strong { @apply font-semibold; }
+  .bm-grid { @apply grid gap-4 gap-x-8 lg:grid-cols-12 lg:gap-8; }
+  .bm-content { @apply lg:col-span-6 lg:col-start-4; }
+  .bm-content-wide { @apply lg:col-span-8 lg:col-start-3; }
+  .bm-content-xwide { @apply lg:col-span-10 lg:col-start-2; }
+  .bm-content-full { @apply lg:col-span-12; }
+  .bm-content-half { @apply lg:col-span-6; }
+  .bm-content-xl * { @apply max-w-xl mx-auto; }
+  .bm-content-2xl * { @apply max-w-2xl mx-auto; }
+  .bm-content-xl img, .bm-content-2xl img { @apply max-w-full my-6 lg:my-12 lg:rounded; }
+  }
+  html { scroll-behavior: smooth; }
+
